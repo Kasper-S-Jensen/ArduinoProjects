@@ -171,15 +171,12 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  volt = (5./1023.)* analogRead(A3);
+  volt = (5./1023.)* analogRead(A3); //convert numeric value to voltage
   Serial.println(volt);
+  
   countZero(delay_);
   countOne(delay_);
-
-  
   countTwo(delay_);
-  
- 
   countThree(delay_);
   countFour(delay_);
   countFive(delay_);
