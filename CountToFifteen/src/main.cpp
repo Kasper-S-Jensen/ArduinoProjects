@@ -5,7 +5,7 @@ int LEDone = 9;
 int LEDtwo = 10;
 int LEDthree = 11;
 int LEDfour = 12;
-int delay_ = 100;
+int delay_ = 1200;
 
 void countZero(int delay_)
   {
@@ -154,13 +154,14 @@ void countZero(int delay_)
 
 
 
-
+ float volt;
 void setup() {
   // put your setup code here, to run once:
  pinMode(LEDone, OUTPUT);
   pinMode(LEDtwo, OUTPUT);
   pinMode(LEDthree, OUTPUT);
   pinMode(LEDfour, OUTPUT);
+  pinMode(A3,INPUT);
   Serial.begin(9600);
 
 }
@@ -170,12 +171,15 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  volt = (5./1023.)* analogRead(A3);
+  Serial.println(volt);
   countZero(delay_);
-  Serial.println("HEY");
   countOne(delay_);
-  Serial.println("HEY");
+
+  
   countTwo(delay_);
-  Serial.println("HEY");
+  
+ 
   countThree(delay_);
   countFour(delay_);
   countFive(delay_);
