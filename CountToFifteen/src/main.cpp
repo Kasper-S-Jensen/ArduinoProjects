@@ -5,7 +5,7 @@ int LEDone = 9;
 int LEDtwo = 10;
 int LEDthree = 11;
 int LEDfour = 12;
-int delay_ = 1200;
+int delay_ = 100;
 
 void countZero(int delay_)
   {
